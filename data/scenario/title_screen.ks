@@ -1,18 +1,24 @@
 [_tb_system_call storage=system/_title_screen.ks]
 
 [iscript]
-$('#loading-img').attr('src', 'data/image/icon2.png');
-$('#loading-text').text('yaippee!');
-
-setTimeout(function(){
-  $('#loading-screen').css({
-    'transition': 'opacity 0.5s',
-    'opacity': '0'
-  });
-  setTimeout(function(){
-    $('#loading-screen').remove();
-  }, 500);
-}, 1000);
+$('#loading-img').attr('src', 'data/image/icon3.png');
+$('#loading-text').text('osuto hajimaru');
+$('#loading-screen').css('cursor', 'pointer');
+$('#loading-screen').one('click', function(){
+  $('#loading-screen').css('pointer-events', 'none');
+  $('#loading-img').attr('src', 'data/image/icon2.png'); 
+  $('#loading-text').text('yaippee!');
+   setTimeout(function(){
+    $('#loading-screen').css({
+      'transition': 'opacity 0.8s',
+      'opacity': '0'
+    });
+    setTimeout(function(){
+      $('#loading-screen').remove();
+      TYRANO.page.awakeNextOrder();
+    }, 800);
+  }, 1000); //
+});
 [endscript]
 
 [tb_start_tyrano_code]
