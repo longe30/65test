@@ -33,7 +33,7 @@ $('#loading-screen').one('click', function(){
 [fuki_chara name="others" fix_width="" max_width=500]
 [_tb_end_tyrano_code]
 
-[playbgm  volume="10"  time="1000"  loop="true"  storage="時鳴り-sharedassets0.assets-54.ogg"  fadein="false"  ]
+[playbgm  volume="10"  time="1000"  loop="true"  storage="tokinari.ogg"  fadein="false"  ]
 [bg  time="0"  method="crossfade"  storage="00背景_白.png"  ]
 [movie  volume="100"  storage="65.mp4"  skip="true"  ]
 [bg  time="1500"  method="fadeInDown"  storage="65.png"  cross="false"  ]
