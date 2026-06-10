@@ -397,7 +397,7 @@
 [chara_mod  name="65"  time="200"  cross="false"  storage="chara/1/05ドン引き_0-sharedassets0.assets-66.png"  ]
 [tb_start_text mode=1 ]
 #65
-おはろこ……ってこれ、[r]全然起きてないじゃないですか？いいんですか？[p]
+おはろこ……ってこれ、[r]全然起きてないじゃないですか？[r]いいんですか？[p]
 占いも……なんというか、[r]怒られないんですか？これで……。[p]
 [_tb_end_text]
 
