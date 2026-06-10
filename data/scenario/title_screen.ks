@@ -1,20 +1,13 @@
 [_tb_system_call storage=system/_title_screen.ks]
 
 [iscript]
-// 1. ロード完了時（クリック待ち）の日本語テキスト
-$('#loading-img').attr('src', 'data/image/loading_complete.png');
+$('#loading-img').attr('src', 'data/image/icon3.png');
 $('#loading-text').text('osuto hajimaru');
 $('#loading-screen').css('cursor', 'pointer');
-
-// 2. クリックされた時の演出
 $('#loading-screen').one('click', function(){
   $('#loading-screen').css('pointer-events', 'none');
-
-  // クリック後の日本語テキスト
-  $('#loading-img').attr('src', 'data/image/next_image.png');
+  $('#loading-img').attr('src', 'data/image/icon2.png');
   $('#loading-text').text('yaippee!');
-
-  // 1秒後にロード画面をフェードアウトして消去
   setTimeout(function(){
     $('#loading-screen').css({'transition': 'opacity 0.8s', 'opacity': '0'});
     setTimeout(function(){
@@ -33,7 +26,7 @@ $('#loading-screen').one('click', function(){
       video.style.width = '100%';
       video.style.height = '100%';
       video.style.zIndex = '999998';
-      video.style.backgroundColor = '#FFFFFF';
+      video.style.backgroundColor = '#000000';
       video.autoplay = true;
       video.playsInline = true;
       document.body.appendChild(video);
@@ -46,7 +39,7 @@ $('#loading-screen').one('click', function(){
   }, 1000);
 });
 [endscript]
-
+[s]
 [tb_start_tyrano_code]
 [hidemenubutton]
 [_tb_end_tyrano_code]
