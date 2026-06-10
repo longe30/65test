@@ -323,7 +323,7 @@
 [tb_start_text mode=1 ]
 #
 突然、[r]彼女の大声が病室に響いた。[p]
-あなた うわ！びっくりした！[p]
+うわ！びっくりした！[p]
 [_tb_end_text]
 
 [tb_start_text mode=1 ]
