@@ -124,31 +124,73 @@
         
         
     </body>
-	<div id="loading-screen" style="position:fixed !important; top:0 !important; left:0 !important; width:100% !important; height:100% !important; background-color:#111111 !important; z-index:9999999 !important; text-align:center !important; box-sizing:border-box !important;">
-	<link rel="preload" href="data/video/65.webm" as="video" type="video/webm"> 
-	<link rel="preload" href="data/bgm/tokinari.ogg" as="audio" type="audio/ogg">
-	<link rel="preload" href="data/bgm/Echoes_of_Childhood_Summers-sharedassets0.assets-55.ogg" as="audio" type="audio/ogg">
-	<link rel="preload" href="data/bgm/Silent_Bloom-sharedassets0.assets-57.ogg" as="audio" type="audio/ogg">
-  <div style="position:absolute !important; top:50% !important; left:50% !important; transform:translate(-50%, -50%) !important; width:100% !important; padding:0 !important; margin:0 !important;">    
-    <div style="display:block !important; width:100% !important; margin:0 0 20px 0 !important; padding:0 !important; text-align:center !important;">
-      <img id="loading-img" src="data/image/icon.png" style="width:200px !important; height:auto !important; display:inline-block !important; margin:0 !important; padding:0 !important;" alt="Loading" onerror="this.style.display='none';">
-    </div>
-    <div style="display:block !important; width:100% !important; margin:0 !important; padding:0 !important; text-align:center !important;">
-      <p id="loading-text" style="
-        display:inline-block !important;
-        font-size: 24px !important; 
-        font-weight: bold !important; 
-        letter-spacing: 4px !important; 
-        margin: 0 !important;
-        padding: 0 !important;
-        color: #ffffff !important;
-        font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif !important;
-        text-shadow: 
-          2px  2px 0 #198CAA, -2px  2px 0 #198CAA, 2px -2px 0 #198CAA, -2px -2px 0 #198CAA,
-          2px  0px 0 #198CAA, -2px  0px 0 #198CAA, 0px  2px 0 #198CAA,  0px -2px 0 #198CAA !important;
-      ">choi_omachi</p>
-    </div>
+<link rel="preload" href="data/video/65.webm" as="video" type="video/webm">
+<link rel="preload" href="data/bgm/tokinari.ogg" as="audio" type="audio/ogg">
 
+<div id="loading-screen" dir="ltr" lang="ja" style="position:fixed !important; top:0 !important; left:0 !important; width:100% !important; height:100% !important; background-color:#111111 !important; z-index:9999999 !important; text-align:center !important; box-sizing:border-box !important; direction: ltr !important;">
+  <div style="position:absolute !important; top:50% !important; left:50% !important; transform:translate(-50%, -50%) !important; width:100% !important; direction: ltr !important;">
+    <div style="display:block !important; margin:0 0 20px 0 !important; text-align:center !important; direction: ltr !important;">
+      <img id="loading-img" src="data/image/loading_now.png" style="width:200px !important; height:auto !important; display:inline-block !important;" alt="Loading" onerror="this.style.display='none';">
+    </div>
+    <div style="display:block !important; text-align:center !important; direction: ltr !important;">
+      <p id="loading-text" dir="ltr" lang="ja" style="
+        display:inline-block !important; font-size: 24px !important; font-weight: bold !important; letter-spacing: 2px !important; margin: 0 !important; color: #ffffff !important; text-align: center !important; direction: ltr !important;
+        font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif !important;
+        text-shadow: 2px 2px 0 #198CAA, -2px 2px 0 #198CAA, 2px -2px 0 #198CAA, -2px -2px 0 #198CAA, 2px 0px 0 #198CAA, -2px 0px 0 #198CAA, 0px 2px 0 #198CAA, 0px -2px 0 #198CAA !important;
+      ">Loading...</p>
+    </div>
   </div>
 </div>
+
+<script>
+  const checkTyrano = setInterval(() => {
+    if (window.TYRANO && window.TYRANO.page) {
+      clearInterval(checkTyrano);
+      
+      document.getElementById('loading-img').src = "data/image/icon3.png";
+      document.getElementById('loading-text').innerText = "osuto hajimaru";
+      document.getElementById('loading-screen').style.cursor = 'pointer';
+
+      document.getElementById('loading-screen').addEventListener('click', function() {
+        document.getElementById('loading-screen').style.pointerEvents = 'none';
+
+        document.getElementById('loading-img').src = "data/image/icon2.png";
+        document.getElementById('loading-text').innerText = "yaippee!";
+
+        window.TYRANO.kag.ftag.startTag("playbgm", {
+          storage: "tokinari.ogg", 
+          loop: "true",
+          volume: "10"
+        });
+
+        var video = document.createElement('video');
+        video.src = 'data/video/65.webm';
+        video.style.position = 'fixed';
+        video.style.top = '0';
+        video.style.left = '0';
+        video.style.width = '100%';
+        video.style.height = '100%';
+        video.style.zIndex = '999998'; 
+        video.style.backgroundColor = '#000000';
+        video.autoplay = true;
+        video.playsInline = true;
+        document.body.appendChild(video);
+
+        setTimeout(function(){
+          var screen = document.getElementById('loading-screen');
+          screen.style.transition = 'opacity 0.8s';
+          screen.style.opacity = '0';
+          setTimeout(function(){
+            screen.remove(); 
+          }, 800);
+        }, 1000);
+
+        video.onended = function() {
+          video.remove();
+          window.TYRANO.page.awakeNextOrder(); 
+        };
+      }, { once: true }); 
+    }
+  }, 200);
+</script>
 </html>

@@ -1,45 +1,3 @@
-[_tb_system_call storage=system/_title_screen.ks]
-
-[iscript]
-$('#loading-img').attr('src', 'data/image/icon3.png');
-$('#loading-text').text('osuto hajimaru');
-$('#loading-screen').css('cursor', 'pointer');
-$('#loading-screen').one('click', function(){
-  $('#loading-screen').css('pointer-events', 'none');
-  $('#loading-img').attr('src', 'data/image/icon2.png');
-  $('#loading-text').text('yaippee!');
-  setTimeout(function(){
-    $('#loading-screen').css({'transition': 'opacity 0.8s', 'opacity': '0'});
-    setTimeout(function(){
-      $('#loading-screen').remove();
-
-      tyrano.plugin.kag.ftag.startTag("playbgm", {
-        storage: "tokinari.ogg", 
-        loop: "true",
-        volume: "10" 
-      });
-      var video = document.createElement('video');
-      video.src = 'data/video/65.webm';
-      video.style.position = 'fixed';
-      video.style.top = '0';
-      video.style.left = '0';
-      video.style.width = '100%';
-      video.style.height = '100%';
-      video.style.zIndex = '999998';
-      video.style.backgroundColor = '#000000';
-      video.autoplay = true;
-      video.playsInline = true;
-      document.body.appendChild(video);
-      video.onended = function() {
-        video.remove();
-        TYRANO.page.awakeNextOrder();
-      };
-      
-    }, 800);
-  }, 1000);
-});
-[endscript]
-[s]
 [tb_start_tyrano_code]
 [hidemenubutton]
 [_tb_end_tyrano_code]
@@ -51,7 +9,7 @@ $('#loading-screen').one('click', function(){
 [tb_start_tyrano_code]
 [fuki_chara name="others" fix_width="" max_width=500]
 [_tb_end_tyrano_code]
-
+[s]
 [bg  time="0"  method="crossfade"  storage="00背景_白.png"  ]
 [bg  time="1500"  method="fadeInDown"  storage="65.png"  cross="false"  ]
 [chara_show  name="65"  time="300"  wait="true"  storage="chara/1/02真顔_0-sharedassets0.assets-68.png"  width="698"  height="865"  left="-40"  top="100"  reflect="false"  ]
