@@ -35,7 +35,7 @@ $('#loading-screen').one('click', function(){
 
 [playbgm  volume="10"  time="1000"  loop="true"  storage="時鳴り-sharedassets0.assets-54.ogg"  fadein="false"  ]
 [bg  time="0"  method="crossfade"  storage="00背景_白.png"  ]
-; [movie  volume="100"  storage="65.mp4"  skip="true"  ]
+[movie  volume="100"  storage="65.mp4"  skip="true"  ]
 [bg  time="1500"  method="fadeInDown"  storage="65.png"  cross="false"  ]
 [chara_show  name="65"  time="300"  wait="true"  storage="chara/1/02真顔_0-sharedassets0.assets-68.png"  width="698"  height="865"  left="-40"  top="100"  reflect="false"  ]
 [delay  speed="50"  ]
