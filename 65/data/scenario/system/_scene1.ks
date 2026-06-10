@@ -1,0 +1,5 @@
+[preload  storage="./data/bgimage/00背景_白.png"  ]
+[preload  storage="./data/bgimage/65.png"  ]
+[preload  storage="./data/fgimage/chara/1/03困り顔_0-sharedassets0.assets-67.png"  ]
+[preload  storage="./data/fgimage/chara/1/01デフォルト_0-sharedassets0.assets-72.png"  ]
+[return]
