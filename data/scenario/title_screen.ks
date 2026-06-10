@@ -1,23 +1,49 @@
 [_tb_system_call storage=system/_title_screen.ks]
 
 [iscript]
-$('#loading-img').attr('src', 'data/image/icon3.png');
+// 1. ロード完了時（クリック待ち）の日本語テキスト
+$('#loading-img').attr('src', 'data/image/loading_complete.png');
 $('#loading-text').text('osuto hajimaru');
 $('#loading-screen').css('cursor', 'pointer');
+
+// 2. クリックされた時の演出
 $('#loading-screen').one('click', function(){
   $('#loading-screen').css('pointer-events', 'none');
-  $('#loading-img').attr('src', 'data/image/icon2.png'); 
+
+  // クリック後の日本語テキスト
+  $('#loading-img').attr('src', 'data/image/next_image.png');
   $('#loading-text').text('yaippee!');
-   setTimeout(function(){
-    $('#loading-screen').css({
-      'transition': 'opacity 0.8s',
-      'opacity': '0'
-    });
+
+  // 1秒後にロード画面をフェードアウトして消去
+  setTimeout(function(){
+    $('#loading-screen').css({'transition': 'opacity 0.8s', 'opacity': '0'});
     setTimeout(function(){
       $('#loading-screen').remove();
-      TYRANO.page.awakeNextOrder();
+
+      tyrano.plugin.kag.ftag.startTag("playbgm", {
+        storage: "tokinari.ogg", 
+        loop: "true",
+        volume: "10" 
+      });
+      var video = document.createElement('video');
+      video.src = 'data/video/65.webm';
+      video.style.position = 'fixed';
+      video.style.top = '0';
+      video.style.left = '0';
+      video.style.width = '100%';
+      video.style.height = '100%';
+      video.style.zIndex = '999998';
+      video.style.backgroundColor = '#FFFFFF';
+      video.autoplay = true;
+      video.playsInline = true;
+      document.body.appendChild(video);
+      video.onended = function() {
+        video.remove();
+        TYRANO.page.awakeNextOrder();
+      };
+      
     }, 800);
-  }, 1000); //
+  }, 1000);
 });
 [endscript]
 
@@ -33,9 +59,7 @@ $('#loading-screen').one('click', function(){
 [fuki_chara name="others" fix_width="" max_width=500]
 [_tb_end_tyrano_code]
 
-[playbgm  volume="10"  time="1000"  loop="true"  storage="tokinari.ogg"  fadein="false"  ]
 [bg  time="0"  method="crossfade"  storage="00背景_白.png"  ]
-[movie  volume="100"  storage="65.mp4"  skip="true"  ]
 [bg  time="1500"  method="fadeInDown"  storage="65.png"  cross="false"  ]
 [chara_show  name="65"  time="300"  wait="true"  storage="chara/1/02真顔_0-sharedassets0.assets-68.png"  width="698"  height="865"  left="-40"  top="100"  reflect="false"  ]
 [delay  speed="50"  ]
