@@ -308,14 +308,13 @@
 *end5
 
 [chara_show  name="65"  time="30"  wait="false"  storage="chara/1/13a...!_0-sharedassets0.assets-84.png"  width="698"  height="865"  left="-40"  top="100"  reflect="false"  ]
-[stopbgm  time="1000"  ]
 [tb_start_text mode=1 ]
 #65
 ピザ…遊園地…配信……。[p]
 [_tb_end_text]
 
 [chara_mod  name="65"  time="200"  cross="false"  storage="chara/1/14思い出した_0-sharedassets0.assets-69.png"  ]
-[playbgm  volume="15"  time="1000"  loop="true"  storage="Echoes_of_Childhood_Summers-sharedassets0.assets-55.mp3"  ]
+[playbgm  volume="10"  time="0"  loop="true"  storage="Echoes_of_Childhood_Summers-sharedassets0.assets-55.mp3"  ]
 [tb_start_text mode=1 ]
 う、わ、わーーーーーーー！！！！[p]
 [_tb_end_text]
