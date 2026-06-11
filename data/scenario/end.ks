@@ -8,7 +8,7 @@
 [_tb_end_tyrano_code]
 
 [tb_start_tyrano_code]
-[fuki_chara name="others" fix_width=”” max_width=400]
+[fuki_chara name="others" fix_width="" max_width=400]
 [_tb_end_tyrano_code]
 
 [bg  time="0"  method="crossfade"  storage="00背景_暗闇_0-sharedassets0.assets-75.png"  ]
