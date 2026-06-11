@@ -143,9 +143,9 @@
 </div>
 
 <script>
-  const checkTyrano = setInterval(() => {
-    if (window.TYRANO && window.TYRANO.page) {
-      clearInterval(checkTyrano);
+  const checkTyranoStatus = setInterval(() => {
+    if (window.TYRANO && window.TYRANO.kag && window.TYRANO.kag.ftag) {
+      clearInterval(checkTyranoStatus);
       
       document.getElementById('loading-img').src = "data/image/icon3.png";
       document.getElementById('loading-text').innerText = "osuto hajimaru";
@@ -155,41 +155,42 @@
         document.getElementById('loading-screen').style.pointerEvents = 'none';
 
         document.getElementById('loading-img').src = "data/image/icon2.png";
-        document.getElementById('loading-text').innerText = "yaippee!";
-
-        window.TYRANO.kag.ftag.startTag("playbgm", {
-          storage: "tokinari.ogg", 
-          loop: "true",
-          volume: "10"
-        });
-
-        var video = document.createElement('video');
-        video.src = 'data/video/65.webm';
-        video.style.position = 'fixed';
-        video.style.top = '0';
-        video.style.left = '0';
-        video.style.width = '100%';
-        video.style.height = '100%';
-        video.style.zIndex = '999998'; 
-        video.style.backgroundColor = '#000000';
-        video.autoplay = true;
-        video.playsInline = true;
-        document.body.appendChild(video);
+        document.getElementById('loading-text').innerText = "yaippee";
 
         setTimeout(function(){
           var screen = document.getElementById('loading-screen');
-          screen.style.transition = 'opacity 0.8s';
+          screen.style.transition = 'opacity 0.4s';
           screen.style.opacity = '0';
+          
           setTimeout(function(){
             screen.remove(); 
-          }, 800);
-        }, 1000);
+            
+            window.TYRANO.kag.ftag.startTag("playbgm", {
+              storage: "tokinari.ogg", 
+              loop: "true",
+              volume: "10"
+            });
 
-        video.onended = function() {
-          video.remove();
-          window.TYRANO.page.awakeNextOrder(); 
-        };
-      }, { once: true }); 
+            var video = document.createElement('video');
+            video.src = 'data/video/65.webm';
+            video.style.position = 'fixed';
+            video.style.top = '0';
+            video.style.left = '0';
+            video.style.width = '100%';
+            video.style.height = '100%';
+            video.style.zIndex = '999998'; 
+            video.style.backgroundColor = '#000000';
+            video.autoplay = true;
+            video.playsInline = true;
+            document.body.appendChild(video);
+
+            video.onended = function() {
+              video.remove();
+              window.TYRANO.page.awakeNextOrder(); 
+            };
+          }, 400);
+        }, 800);
+      }, { once: true });
     }
   }, 200);
 </script>
