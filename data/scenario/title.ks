@@ -12,6 +12,11 @@ if (typeof myAudio !== 'undefined' && myAudio) {
     myAudio.currentTime = 0;
 }
 
+if (window.globalBgmPlayer) {
+    window.globalBgmPlayer.pause();
+    window.globalBgmPlayer.currentTime = 0;
+}
+
 myAudio = new Audio("./data/bgm/Silent_Bloom-sharedassets0.assets-57.m4a");
 myAudio.loop = true;
 myAudio.volume = 0.1;
