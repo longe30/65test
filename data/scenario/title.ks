@@ -6,6 +6,13 @@
 [tb_image_show  time="1500"  storage="default/65656.png"  width="640"  height="960"  y="-190"  name="img_4"  ]
 *retry
 
+[iscript]
+if (window.globalBgmPlayer) {
+  window.globalBgmPlayer.pause();
+  window.globalBgmPlayer = null;
+}
+[endscript]
+
 [playbgm  volume="20"  time="1000"  loop="true"  storage="Silent_Bloom-sharedassets0.assets-57.ogg"  ]
 [chara_show  name="65"  time="0"  wait="true"  storage="chara/1/02真顔_0-sharedassets0.assets-68.png"  width="698"  height="865"  left="-40"  top="100"  reflect="false"  ]
 [tb_fuki_start  ]
