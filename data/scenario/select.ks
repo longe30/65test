@@ -11,7 +11,7 @@
 
 [font  size="25"  color="0xffffff"  face="mplus-1c-medium-sharedassets0assets-61"  ]
 [tb_start_tyrano_code]
-[glink graphic="select.png" enterimg="select2.png" text="食べ物を差し入れる" size=22 font_color="0xffffff" x=0 y=200 target=*food]
+[glink graphic="select.png" enterimg="select2.png" text="食べ物を差し入れる" size=22 font_color="0xffffff" x=0 y=200 height=70 target=*food]
 [_tb_end_tyrano_code]
 
 [tb_start_tyrano_code]
