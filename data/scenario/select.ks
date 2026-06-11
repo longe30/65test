@@ -16,9 +16,14 @@
 [glink graphic="select.png" enterimg="select2.png" text="お出かけに誘う" size=22 font_color="0xffffff" x=200 y=100 height=70 target=*place]
 
 [glink graphic="select.png" enterimg="select2.png" text="本人の動画を見せる" size=22 font_color="0xffffff" x=350 y=200 height=70 target=*stream]
-[iscript]
-  $(".my_btn").css("line-height", "70px");
-[endscript]
+[html]
+<style>
+  .my_btn {
+    padding-top: 11px !important;
+    box-sizing: border-box !important;
+  }
+</style>
+[html]
 [_tb_end_tyrano_code]
 
 [s  ]
@@ -32,9 +37,14 @@
 [glink graphic="select.png" enterimg="select2.png" text="コーラ" size=30 font_color="0xffffff" x=200 y=100 height=70 target=*cola]
 
 [glink graphic="select.png" enterimg="select2.png" text="リンゴ" size=30 font_color="0xffffff" x=400 y=200 height=70 target=*apple]
-[iscript]
-  $(".my_btn").css("line-height", "70px");
-[endscript]
+[html]
+<style>
+  .my_btn {
+    padding-top: 11px !important;
+    box-sizing: border-box !important;
+  }
+</style>
+[html]
 [_tb_end_tyrano_code]
 
 [s  ]
@@ -48,9 +58,14 @@
 [glink graphic="select.png" enterimg="select2.png" text="遊園地" size=30 font_color="0xffffff" x=220 y=100 height=70 target=*amuse]
 
 [glink graphic="select.png" enterimg="select2.png" text="公園" size=30 font_color="0xffffff" x=420 y=200 height=70 target=*park]
-[iscript]
-  $(".my_btn").css("line-height", "70px");
-[endscript]
+[html]
+<style>
+  .my_btn {
+    padding-top: 11px !important;
+    box-sizing: border-box !important;
+  }
+</style>
+[html]
 [_tb_end_tyrano_code]
 
 [s  ]
@@ -68,9 +83,14 @@
 [glink graphic="select.png" enterimg="select2.png" text="外ロケ企画" size=25 font_color="0xffffff" x=100 y=200 height=70 target=*outdoor]
 
 [glink graphic="select.png" enterimg="select2.png" text="ライブ映像" size=25 font_color="0xffffff" x=350 y=200 height=70 target=*live]
-[iscript]
-  $(".my_btn").css("line-height", "70px");
-[endscript]
+[html]
+<style>
+  .my_btn {
+    padding-top: 11px !important;
+    box-sizing: border-box !important;
+  }
+</style>
+[html]
 [_tb_end_tyrano_code]
 
 [s  ]
