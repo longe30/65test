@@ -125,7 +125,9 @@
         
     </body>
 <link rel="preload" href="data/video/65.webm" as="video" type="video/webm">
-<link rel="preload" href="data/bgm/tokinari.mp3" as="audio" type="audio/mp3">
+<link rel="preload" href="data/bgm/tokinari.m4a" as="audio" type="audio/m4a">
+<link rel="preload" href="data/bgm/Echoes_of_Childhood_Summers-sharedassets0.assets-55.m4a" as="audio" type="audio/m4a">
+<link rel="preload" href="data/bgm/Silent_Bloom-sharedassets0.assets-57.m4a" as="audio" type="audio/m4a">
 
 <div id="loading-screen" dir="ltr" lang="ja" style="position:fixed !important; top:0 !important; left:0 !important; width:100% !important; height:100% !important; background-color:#111111 !important; z-index:9999999 !important; text-align:center !important; box-sizing:border-box !important; direction: ltr !important;">
   <div style="position:absolute !important; top:50% !important; left:50% !important; transform:translate(-50%, -50%) !important; width:100% !important; direction: ltr !important;">
@@ -157,7 +159,7 @@
         document.getElementById('loading-img').src = "data/image/icon2.png";
         document.getElementById('loading-text').innerText = "yaippee!";
 
-        window.globalBgmPlayer = new Audio('data/bgm/tokinari.mp3');
+        window.globalBgmPlayer = new Audio('data/bgm/tokinari.ogg');
         window.globalBgmPlayer.loop = true;
         window.globalBgmPlayer.volume = 0.1;
         window.globalBgmPlayer.play().catch(e => console.log(e));
