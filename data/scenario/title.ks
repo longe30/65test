@@ -12,7 +12,7 @@ if (window.globalBgmPlayer) {
   window.globalBgmPlayer = null;
 }
 
-var myAudio = new Audio("./data/bgm/Silent_Bloom-sharedassets0.assets-57.m4a");
+myAudio = new Audio("./data/bgm/Silent_Bloom-sharedassets0.assets-57.m4a");
 myAudio.loop = true;
 myAudio.volume = 0.1;
 myAudio.play();
