@@ -11,9 +11,13 @@ if (window.globalBgmPlayer) {
   window.globalBgmPlayer.pause();
   window.globalBgmPlayer = null;
 }
+
+var myAudio = new Audio("./data/bgm/Silent_Bloom-sharedassets0.assets-57.m4a");
+myAudio.loop = true;
+myAudio.volume = 0.1;
+myAudio.play();
 [endscript]
 
-[playbgm  volume="10"  time="0"  loop="true"  storage="Silent_Bloom-sharedassets0.assets-57.ogg"  ]
 [chara_show  name="65"  time="0"  wait="true"  storage="chara/1/02真顔_0-sharedassets0.assets-68.png"  width="698"  height="865"  left="-40"  top="100"  reflect="false"  ]
 [tb_fuki_start  ]
 [tb_start_tyrano_code]

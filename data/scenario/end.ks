@@ -314,7 +314,12 @@
 [_tb_end_text]
 
 [chara_mod  name="65"  time="200"  cross="false"  storage="chara/1/14思い出した_0-sharedassets0.assets-69.png"  ]
-[playbgm  volume="10"  time="0"  loop="true"  storage="Echoes_of_Childhood_Summers-sharedassets0.assets-55.ogg"  ]
+[iscript]
+var myAudio = new Audio("./data/bgm/Echoes_of_Childhood_Summers-sharedassets0.assets-55.m4a");
+myAudio.loop = true;
+myAudio.volume = 0.1;
+myAudio.play();
+[endscript]
 [tb_start_text mode=1 ]
 う、わ、わーーーーーーー！！！！[p]
 [_tb_end_text]
