@@ -318,7 +318,9 @@
 if (typeof myAudio !== 'undefined' && myAudio) {
     myAudio.pause();
     myAudio.currentTime = 0;
-var myAudio = new Audio("./data/bgm/Echoes_of_Childhood_Summers-sharedassets0.assets-55.m4a");
+}
+
+myAudio = new Audio("./data/bgm/Echoes_of_Childhood_Summers-sharedassets0.assets-55.m4a");
 myAudio.loop = true;
 myAudio.volume = 0.1;
 myAudio.play();
