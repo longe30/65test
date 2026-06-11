@@ -1,4 +1,4 @@
-[glink text="" name="dummy-next-btn" x=-999 y=-999 width=1 height=1 target=*main_game]
+
 [s]
 
 *main_game

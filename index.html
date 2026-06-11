@@ -157,44 +157,43 @@
         document.getElementById('loading-img').src = "data/image/icon2.png";
         document.getElementById('loading-text').innerText = "yaippee!";
 
+        window.globalBgmPlayer = new Audio('data/bgm/tokinari.ogg');
+        window.globalBgmPlayer.loop = true;
+        window.globalBgmPlayer.volume = 0.1;
+        window.globalBgmPlayer.play().catch(e => console.log(e));
+
+        var video = document.createElement('video');
+        video.src = 'data/video/65.webm';
+        video.style.position = 'fixed';
+        video.style.top = '0';
+        video.style.left = '0';
+        video.style.width = '100%';
+        video.style.height = '100%';
+        video.style.zIndex = '999998'; 
+        video.style.backgroundColor = '#000000';
+        video.style.opacity = '0'; 
+        video.style.transition = 'opacity 0.4s';
+        video.autoplay = true;
+        video.playsInline = true;
+        video.muted = true;
+        document.body.appendChild(video);
+        video.play().catch(e => console.log(e));
+
         setTimeout(function(){
           var screen = document.getElementById('loading-screen');
           screen.style.transition = 'opacity 0.4s';
           screen.style.opacity = '0';
+          video.style.opacity = '1'; 
           
           setTimeout(function(){
             screen.remove(); 
-            
-            window.globalBgmPlayer = new Audio('data/bgm/tokinari.ogg');
-            window.globalBgmPlayer.loop = true;
-            window.globalBgmPlayer.volume = 0.1;
-            window.globalBgmPlayer.play().catch(e => console.log(e));
-
-            var video = document.createElement('video');
-            video.src = 'data/video/65.webm';
-            video.style.position = 'fixed';
-            video.style.top = '0';
-            video.style.left = '0';
-            video.style.width = '100%';
-            video.style.height = '100%';
-            video.style.zIndex = '999998'; 
-            video.style.backgroundColor = '#000000';
-            video.autoplay = true;
-            video.playsInline = true;
-            video.muted = true;
-            document.body.appendChild(video);
-
-            video.onended = function() {
-              video.remove();
-              var dummyBtn = document.querySelector('.dummy-next-btn');
-              if (dummyBtn) {
-                dummyBtn.click();
-              } else {
-                window.TYRANO.kag.ftag.nextOrder();
-              }
-            };
           }, 400);
         }, 800);
+
+        video.onended = function() {
+          video.remove();
+          window.TYRANO.kag.ftag.startTag("jump", {target: "*main_game"});
+        };
       }, { once: true });
     }
   }, 200);
