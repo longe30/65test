@@ -12,14 +12,13 @@
 [font  size="25"  color="0xffffff"  face="mplus-1c-medium-sharedassets0assets-61"  ]
 [tb_start_tyrano_code]
 [glink graphic="select.png" enterimg="select2.png" text="食べ物を差し入れる" size=22 font_color="0xffffff" x=0 y=200 height=70 target=*food]
-[_tb_end_tyrano_code]
 
-[tb_start_tyrano_code]
-[glink graphic="select.png" enterimg="select2.png" text="お出かけに誘う" size=22 font_color="0xffffff" x=200 y=100 target=*place]
-[_tb_end_tyrano_code]
+[glink graphic="select.png" enterimg="select2.png" text="お出かけに誘う" size=22 font_color="0xffffff" x=200 y=100 height=70 target=*place]
 
-[tb_start_tyrano_code]
-[glink graphic="select.png" enterimg="select2.png" text="本人の動画を見せる" size=22 font_color="0xffffff" x=350 y=200 target=*stream]
+[glink graphic="select.png" enterimg="select2.png" text="本人の動画を見せる" size=22 font_color="0xffffff" x=350 y=200 height=70 target=*stream]
+[iscript]
+  $(".my_btn").css("line-height", "70px");
+[endscript]
 [_tb_end_tyrano_code]
 
 [s  ]
@@ -45,15 +44,14 @@
 [tb_eval  exp="f.place+=1"  name="place"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
 [font  size="25"  color="0xffffff"  face="mplus-1c-medium-sharedassets0assets-61"  ]
 [tb_start_tyrano_code]
-[glink graphic="select.png" enterimg="select2.png" text="博物館" size=30 font_color="0xffffff" x=40 y=200 target=*museum]
-[_tb_end_tyrano_code]
+[glink graphic="select.png" enterimg="select2.png" text="博物館" size=30 font_color="0xffffff" x=40 y=200 height=70 target=*museum]
 
-[tb_start_tyrano_code]
-[glink graphic="select.png" enterimg="select2.png" text="遊園地" size=30 font_color="0xffffff" x=220 y=100 target=*amuse]
-[_tb_end_tyrano_code]
+[glink graphic="select.png" enterimg="select2.png" text="遊園地" size=30 font_color="0xffffff" x=220 y=100 height=70 target=*amuse]
 
-[tb_start_tyrano_code]
-[glink graphic="select.png" enterimg="select2.png" text="公園" size=30 font_color="0xffffff" x=420 y=200 target=*park]
+[glink graphic="select.png" enterimg="select2.png" text="公園" size=30 font_color="0xffffff" x=420 y=200 height=70 target=*park]
+[iscript]
+  $(".my_btn").css("line-height", "70px");
+[endscript]
 [_tb_end_tyrano_code]
 
 [s  ]
@@ -62,23 +60,18 @@
 [tb_eval  exp="f.stream+=1"  name="stream"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
 [font  size="25"  color="0xffffff"  face="mplus-1c-medium-sharedassets0assets-61"  ]
 [tb_start_tyrano_code]
-[glink graphic="select.png" enterimg="select2.png" text="初配信" size=25 font_color="0xffffff" x=10 y=100 target=*first]
-[_tb_end_tyrano_code]
+[glink graphic="select.png" enterimg="select2.png" text="初配信" size=25 font_color="0xffffff" x=10 y=100 height=70 target=*first]
 
-[tb_start_tyrano_code]
-[glink graphic="select.png" enterimg="select2.png" text="定期朝雑談" size=25 font_color="0xffffff" x=180 y=100 target=*oharoco]
-[_tb_end_tyrano_code]
+[glink graphic="select.png" enterimg="select2.png" text="定期朝雑談" size=25 font_color="0xffffff" x=180 y=100 height=70 target=*oharoco]
 
-[tb_start_tyrano_code]
-[glink graphic="select.png" enterimg="select2.png" text="おふざけ企画" size=25 font_color="0xffffff" x=380 y=100 target=*kikaku]
-[_tb_end_tyrano_code]
+[glink graphic="select.png" enterimg="select2.png" text="おふざけ企画" size=25 font_color="0xffffff" x=380 y=100 height=70 target=*kikaku]
 
-[tb_start_tyrano_code]
-[glink graphic="select.png" enterimg="select2.png" text="外ロケ企画" size=25 font_color="0xffffff" x=100 y=200 target=*outdoor]
-[_tb_end_tyrano_code]
+[glink graphic="select.png" enterimg="select2.png" text="外ロケ企画" size=25 font_color="0xffffff" x=100 y=200 height=70 target=*outdoor]
 
-[tb_start_tyrano_code]
-[glink graphic="select.png" enterimg="select2.png" text="ライブ映像" size=25 font_color="0xffffff" x=350 y=200 target=*live]
+[glink graphic="select.png" enterimg="select2.png" text="ライブ映像" size=25 font_color="0xffffff" x=350 y=200 height=70 target=*live]
+[iscript]
+  $(".my_btn").css("line-height", "70px");
+[endscript]
 [_tb_end_tyrano_code]
 
 [s  ]
