@@ -27,15 +27,14 @@
 [tb_eval  exp="f.food+=1"  name="food"  cmd="+="  op="t"  val="1"  val_2="undefined"  ]
 [font  size="25"  color="0xffffff"  face="mplus-1c-medium-sharedassets0assets-61"  ]
 [tb_start_tyrano_code]
-[glink graphic="select.png" enterimg="select2.png" text="ピザ" size=30 font_color="0xffffff" x=40 y=200 target=*pizza]
-[_tb_end_tyrano_code]
+[glink graphic="select.png" enterimg="select2.png" text="ピザ" size=30 font_color="0xffffff" x=40 y=200 height=70 target=*pizza]
 
-[tb_start_tyrano_code]
-[glink graphic="select.png" enterimg="select2.png" text="コーラ" size=30 font_color="0xffffff" x=200 y=100 target=*cola]
-[_tb_end_tyrano_code]
+[glink graphic="select.png" enterimg="select2.png" text="コーラ" size=30 font_color="0xffffff" x=200 y=100 height=70 target=*cola]
 
-[tb_start_tyrano_code]
-[glink graphic="select.png" enterimg="select2.png" text="リンゴ" size=30 font_color="0xffffff" x=400 y=200 target=*apple]
+[glink graphic="select.png" enterimg="select2.png" text="リンゴ" size=30 font_color="0xffffff" x=400 y=200 height=70 target=*apple]
+[iscript]
+  $(".my_btn").css("line-height", "70px");
+[endscript]
 [_tb_end_tyrano_code]
 
 [s  ]
