@@ -165,10 +165,11 @@
           setTimeout(function(){
             screen.remove(); 
             
-            var bgm = new Audio('data/bgm/tokinari.ogg');
-            bgm.loop = true;
-            bgm.volume = 0.1;
-            bgm.play().catch(e => console.log(e));
+            window.TYRANO.kag.ftag.startTag("playbgm", {
+              storage: "tokinari.ogg", 
+              loop: "true",
+              volume: "10"
+            });
 
             var video = document.createElement('video');
             video.src = 'data/video/65.webm';
@@ -181,11 +182,12 @@
             video.style.backgroundColor = '#000000';
             video.autoplay = true;
             video.playsInline = true;
+            video.muted = true;
             document.body.appendChild(video);
 
             video.onended = function() {
               video.remove();
-              window.TYRANO.kag.ftag.nextOrder();
+              window.TYRANO.kag.ftag.startTag("jump", {target: "*main_game"});
             };
           }, 400);
         }, 800);

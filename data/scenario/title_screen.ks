@@ -1,3 +1,6 @@
+[s]
+
+*main_game
 [tb_start_tyrano_code]
 [hidemenubutton]
 [_tb_end_tyrano_code]
@@ -9,7 +12,7 @@
 [tb_start_tyrano_code]
 [fuki_chara name="others" fix_width="" max_width=500]
 [_tb_end_tyrano_code]
-[s]
+
 [bg  time="0"  method="crossfade"  storage="00背景_白.png"  ]
 [bg  time="1500"  method="fadeInDown"  storage="65.png"  cross="false"  ]
 [chara_show  name="65"  time="300"  wait="true"  storage="chara/1/02真顔_0-sharedassets0.assets-68.png"  width="698"  height="865"  left="-40"  top="100"  reflect="false"  ]
@@ -17,6 +20,7 @@
 [font  size="25"  color="0xffffff"  face="mplus-1c-medium-sharedassets0assets-61"  ]
 [popopo  type="triangle"  volume="15"  time="5"  octave="0"  frequency="D"  chara="default"  storage="文字送りa単-sharedassets0.assets-56.ogg"  ]
 [tb_fuki_start  ]
+
 [tb_start_text mode=1 ]
 #65
 その、鏑木ろこ？っていうのが[r]私の名前なんですか？[p]
