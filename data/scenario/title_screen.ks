@@ -2,6 +2,10 @@
 [s]
 
 *main_game
+[nolog]
+[iscript]
+window.TYRANO.kag.config.configScrollAction = "none";
+[endscript]
 [tb_start_tyrano_code]
 [hidemenubutton]
 [_tb_end_tyrano_code]
